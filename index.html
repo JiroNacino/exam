@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title> Object Animation </title>
+	<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-assets>
+			<img id="floor" src="floor.jpg">
+		</a-assets>
+
+
+		<a-plane src="#floor" shader="flat" rotation="-90 0 0" scale="5 5 1">
+		</a-plane>
+
+		<a-entity position="0 0 8">
+			<a-camera></a-camera>
+		</a-entity>
+
+		<a-box color="#00FF00" position="0 0.5 0">
+			<a-animation attribute="rotation"
+						 to="0 360 0"
+						 repeat="indefinite"
+						 dur="5000"
+						 easing="linear">
+			</a-animation>
+		</a-box>
+	</a-scene>
+</body>
+</html>
