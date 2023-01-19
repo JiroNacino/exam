@@ -52,6 +52,18 @@
 						 easing="linear">
 			</a-animation>
 			</a-cone>
+	<!-- Color animation -->
+	<a-entity>
+		<a-sphere color="#7FFFD4"
+				  radius="0.5"
+				  position="0 2.25 0">
+		<a-animation attribute="material.color"
+					 from="#FFC0CB"
+					 to="#FF00FF"
+					 repeat="indefinite"
+					 direction="alternate"
+					 dur="1500"
+		</a-entity>
 <a-sky material=" shader: flat; src: url(images/background.jpg)"></a-sky>
 
 	</a-scene>
