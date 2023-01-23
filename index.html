@@ -2,72 +2,90 @@
 <html>
 	<head>
 		<title> Object Animation </title>
-		<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+		<script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
 	</head>
 	<body>
 		<a-scene>
-			<a-assets>
-				<img id="floor" src="floor.jpg">
-			</a-assets>
-			<a-plane src="#floor" shader="flat" rotation="-90 0 0" scale="5 5 1">
+			<a-plane
+				 material = "shader: flat; color: yellow"
+				 rotation = "-90 0 0"
+				 scale = "5 5 1">
 			</a-plane>
-			<a-entity position="0 0 8">
-				<a-camera></a-camera>
-			</a-entity>
-			<a-box color="#800000" position="0 4 0">
-				<a-animation attribute="rotation"
-					to="0 -360 0"
-					repeat="indefinite"
-					dur="5000"
-					easing="linear">
+			<a-box
+			       color = "#800000"
+			       position = "0 4 0">
+				<a-animation
+					attribute = "rotation"
+					to ="0 -360 0"
+					repeat = "indefinite"
+					dur = "5000"
+					easing = "linear">
 				</a-animation>
 			</a-box>
-			<a-entity
-			<a-box color="#800000" position="0 4 0">
-			<a-animation attribute="rotation"
-				to="0 -360 0"
-				repeat="indefinite"
-				dur="5000"
-				easing="linear">
-			</a-animation>
-			<a-box color="#00FFFF" position="2 -1 0">
-				<a-animation attribute="rotation"
-					to="0 -350 0"
-					repeat="indefinite"
-					dur="5000"
-					easing="linear">
-				</a-animation>
-			</a-box>
+			
+			<a-entity>
+				<a-box
+				       color = "#800000"
+				       position = "0 4 0">
+					<a-animation
+						attribute = "rotation"
+						to = "0 -360 0"
+						repeat = "indefinite"
+						dur = "5000"
+						easing = "linear">
+					</a-animation>
+					<a-box
+					       color = "#00FFFF"
+					       position = "2 -1 0">
+					<a-animation
+						attribute = "rotation"
+						to = "0 -350 0"
+						repeat = "indefinite"
+						dur = "5000"
+						easing = "linear">
+					</a-animation>
+				</a-box>
 			</a-entity>
-			<a-cone color="#008000" position="0 0.5 0">
-				<a-animation attribute="position"
-					to="1 0.5 0"
-					repeat="indefinite"
-					dur="5000"
-					easing="linear">
+				
+			<a-cone
+				color = "#008000"
+				position = "0 0.5 0">
+				<a-animation
+					attribute = "position"
+					to = "1 0.5 0"
+					repeat = "indefinite"
+					dur = "5000"
+					easing = "linear">
 				</a-animation>
 			</a-cone>
-			<a-sky material=" shader: flat; src: url(images/bgpic.jpg)"></a-sky>
+				
+			
 			<!-- Color animation -->
 			<a-entity>
-				<a-sphere color="#7FFFD4"
-					radius="0.5"
-					position="0 2.25 0">
-					<a-animation attribute="material.color"
-						from="#FFC0CB"
-						to="#FF00FF"
-						repeat="indefinite"
-						direction="alternate"
-						dur="1500">
+				<a-sphere
+					color = "#7FFFD4"
+					radius = "0.5"
+					position = "0 2.25 0">
+					<a-animation
+						attribute = "material.color"
+						from = "#FFC0CB"
+						to = "#FF00FF"
+						repeat = "indefinite"
+						direction = "alternate"
+						dur = "1500">
 					</a-animation>
 				</a-sphere>
 			</a-entity>
+				
 			<a-video
 				src= "video/videoplayback.mp4" 
 				autoplay= "true" 
 				width="11" 
 				height="19"
 				position="-5 5.5 -8"></a-video>
+				
+			<a-sky
+			       material = "shader: flat; src: url(images/bgpic.jpg)"></a-sky>
 		</a-scene>
 	</body>
 </html>
